@@ -1,0 +1,321 @@
+/* General body and fonts */
+body {
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  background: linear-gradient(to right, #a8edea, #fed6e3); /* mint background */
+  margin: 40px 20px;
+  color: #2e3d3a; /* deep teal/gray */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Container for top header */
+.header {
+  max-width: 800px;
+  margin: 0 auto 20px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  color: #1b3a36;
+}
+
+/* Railway Crossings heading aligned left */
+.header h2 {
+  font-weight: 900;
+  font-size: 2.8rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  user-select: none;
+  margin: 0;
+  text-shadow: 1px 1px 4px #8fdccf;
+  color: #1b3a36;
+}
+
+/* Logout button aligned right inline */
+.logout-link {
+  position: static;
+  background-color: transparent;
+  border: 2px solid #4db6ac;
+  color: #4db6ac;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-family: 'Georgia', serif;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  user-select: none;
+}
+
+.logout-link:hover,
+.logout-link:focus {
+  background-color: #00796b;
+  color: #e0f7f4;
+  border-color: #00796b;
+  box-shadow: 0 6px 12px rgba(0, 121, 107, 0.7);
+  outline-color: #b2dfdb;
+  outline-offset: 3px;
+  outline-style: solid;
+  outline-width: 2px;
+}
+
+/* Filter buttons container below header */
+.filter-buttons {
+  max-width: 800px;
+  margin: 0 auto 25px auto;
+  display: flex;
+  gap: 25px;
+  justify-content: flex-start; /* Moved to left */
+}
+
+/* Filter button style */
+.filter-buttons a {
+  padding: 10px 28px;
+  background-color: #4db6ac;
+  color: #e0f7f4;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 25px;
+  text-decoration: none;
+  font-family: 'Georgia', serif;
+  box-shadow: 0 4px 6px rgba(77, 182, 172, 0.4);
+  transition: background-color 0.35s ease, box-shadow 0.35s ease, transform 0.25s ease;
+  user-select: none;
+}
+
+.filter-buttons a:hover,
+.filter-buttons a:focus {
+  background-color: #00796b;
+  box-shadow: 0 6px 12px rgba(0, 121, 107, 0.7);
+  transform: translateY(-2px);
+  outline-color: #b2dfdb;
+  outline-offset: 3px;
+  outline-style: solid;
+  outline-width: 2px;
+}
+
+/* Search container form */
+.search-container {
+  max-width: 800px;
+  margin: 0 auto 40px auto;
+  display: flex;
+  justify-content: flex-end; /* moved search to right */
+}
+
+/* Search form layout */
+.search-container form {
+  display: flex;
+  gap: 15px;
+}
+
+/* Search input */
+.search-container input[type="text"] {
+  padding: 12px 16px;
+  border: 1px solid #b2dfdb;
+  border-radius: 25px;
+  font-size: 1rem;
+  color: #2e3d3a;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+/* Focused search input */
+.search-container input[type="text"]:focus {
+  border-color: #00796b;
+  outline: none;
+  box-shadow: 0 0 5px #26a69a;
+}
+
+/* Submit button */
+.search-container input[type="submit"] {
+  background-color: #4db6ac;
+  border: none;
+  color: #e0f7f4;
+  padding: 12px 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(77, 182, 172, 0.4);
+  transition: background-color 0.35s ease, box-shadow 0.35s ease, transform 0.25s ease;
+  font-family: 'Georgia', serif;
+}
+
+/* Submit hover/focus */
+.search-container input[type="submit"]:hover,
+.search-container input[type="submit"]:focus {
+  background-color: #00796b;
+  box-shadow: 0 6px 12px rgba(0, 121, 107, 0.7);
+  transform: translateY(-2px);
+  outline-color: #b2dfdb;
+  outline-offset: 3px;
+  outline-style: solid;
+  outline-width: 2px;
+}
+
+/* Submit active click */
+.search-container input[type="submit"]:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 5px rgba(0, 121, 107, 0.5);
+}
+
+/* Crossings container - vertical list */
+.crossings-container {
+  max-width: 800px;
+  margin: 0 auto 60px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Each crossing card */
+.crossing {
+  background: rgba(224, 247, 244, 0.9);
+  padding: 24px 28px;
+  border-radius: 16px;
+  box-shadow: 0 8px 16px rgba(77, 182, 172, 0.15);
+  color: #2e3d3a;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Crossing heading */
+.crossing h3 {
+  margin: 0;
+  color: #1b3a36;
+  font-weight: 800;
+  font-size: 1.8rem;
+  user-select: none;
+  letter-spacing: 1px;
+}
+
+/* Status styling */
+.status {
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 12px;
+  display: inline-block;
+  font-size: 1rem;
+  user-select: none;
+}
+
+.status.open {
+  background-color: #a8e6cf;
+  color: #1b3a36;
+}
+
+.status.closed {
+  background-color: #ff8a80;
+  color: #1b3a36;
+}
+
+/* Info text */
+.crossing p {
+  margin: 2px 0;
+  font-size: 1rem;
+}
+
+.crossing p strong {
+  color: #00796b;
+  font-weight: 700;
+}
+
+/* Button container */
+.btn-container {
+  margin-top: 12px;
+}
+
+/* Buttons (Favorite/Unfavorite) */
+.btn {
+  background-color: #4db6ac;
+  border: none;
+  color: #e0f7f4;
+  padding: 10px 22px;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(77, 182, 172, 0.4);
+  font-family: 'Georgia', serif;
+  user-select: none;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.35s ease, box-shadow 0.35s ease, transform 0.25s ease;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: #00796b;
+  box-shadow: 0 6px 12px rgba(0, 121, 107, 0.7);
+  transform: translateY(-2px);
+  outline-color: #b2dfdb;
+  outline-offset: 3px;
+  outline-style: solid;
+  outline-width: 2px;
+}
+
+/* Special red button for unfavorite */
+.btn[style*="background-color:#f44336"] {
+  background-color: #f44336 !important;
+}
+.btn[style*="background-color:#f44336"]:hover,
+.btn[style*="background-color:#f44336"]:focus {
+  background-color: #d32f2f !important;
+  box-shadow: 0 6px 12px rgba(211, 47, 47, 0.7);
+  transform: translateY(-2px);
+  outline-color: #b2dfdb;
+}
+
+/* Responsive adjustments */
+@media (max-width: 800px) {
+  body {
+    margin: 20px 10px;
+  }
+
+  .header {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+    position: static;
+  }
+
+  .logout-link {
+    position: static;
+    transform: none;
+    margin-left: auto;
+    margin-top: 10px;
+    width: 100%;
+    padding: 12px 0;
+    text-align: center;
+  }
+
+  .filter-buttons {
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+  }
+
+  .search-container {
+    justify-content: center;
+  }
+
+  .search-container form {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .search-container input[type="submit"] {
+    width: 100%;
+  }
+
+  .crossings-container {
+    margin: 0 10px 40px 10px;
+  }
+}
