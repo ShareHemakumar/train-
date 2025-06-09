@@ -9,9 +9,12 @@
  
 <div class="header">
     <h2>Railway Crossings</h2>
-    <a href="Login.jsp" class="logout-link">Logout</a>
 </div>
- 
+
+<div class="log">
+  <a href="Login.jsp" class="logout-link">Logout</a>
+</div>
+
 <div class="filter-buttons">
     <a href="UserHome.jsp?filter=all">All Crossings</a>
     <a href="UserHome.jsp?filter=favorites">Favorites</a>
@@ -84,7 +87,7 @@
 %>
     <div class="crossing">
         <h3><%= crossingName %></h3>
-        <p>Status: <span class="status <%= rs.getString("status").equalsIgnoreCase("Closed") ? "closed" : "open" %>">
+        <p><strong>Status</strong>: <span class="status <%= rs.getString("status").equalsIgnoreCase("Closed") ? "closed" : "open" %>">
             <%= rs.getString("status") %>
         </span></p>
         <p><strong>Person-in-Charge:</strong> <%= rs.getString("personincharge") %></p>
@@ -95,7 +98,7 @@
             <% if (!favorites.contains(crossingName)) { %>
                 <a href="UserHome.jsp?filter=<%=filter%>&search=<%= java.net.URLEncoder.encode(search, "UTF-8") %>&addfav=<%= crossingName %>" class="btn">Add to Favorite</a>
             <% } else { %>
-                <a href="UserHome.jsp?filter=<%=filter%>&search=<%= java.net.URLEncoder.encode(search, "UTF-8") %>&removefav=<%= crossingName %>" class="btn" style="background-color:#f44336;">Unfavorite</a>
+                <a href="UserHome.jsp?filter=<%=filter%>&search=<%= java.net.URLEncoder.encode(search, "UTF-8") %>&removefav=<%= crossingName %>" class="btn" style="background-color:#f44336;">Removefavorite</a>
             <% } %>
         </div>
     </div>

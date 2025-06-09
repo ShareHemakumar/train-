@@ -1,11 +1,13 @@
 <%@page import="com.railway.bean.RailwayCrossingBean"%>
 <html>
 <head>
-<link rel="stylesheet" href="AddFormcss.css">
+<link rel="stylesheet" href="AddFormcss.css"/>
 
 </head>
 <body>
-<h1>Railway Crossing</h1>
+<div class="header">
+    <h2>Railway Crossing</h2>
+</div>
 <h6>Add Railway Crossing Information</h6>
 <%RailwayCrossingBean rcb=(RailwayCrossingBean)session.getAttribute("add");%>
 <form action="AddCrossingForm.jsp">
